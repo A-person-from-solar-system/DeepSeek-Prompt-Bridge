@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "DeepSeek Prompt Bridge",
+  "version": "1.0.0",
+  "description": "为 DeepSeek 官网会话添加独立的系统提示词与 few-shot 示例，不需要 API Key。",
+  "permissions": ["storage"],
+  "host_permissions": ["https://chat.deepseek.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://chat.deepseek.com/*"],
+      "js": ["injected.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://chat.deepseek.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [],
+  "action": {
+    "default_title": "DeepSeek Prompt Bridge"
+  }
+}

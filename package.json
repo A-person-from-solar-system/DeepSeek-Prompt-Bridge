@@ -1,0 +1,14 @@
+{
+  "name": "deepseek-prompt-bridge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browser extension that injects per-session prompts into the official DeepSeek web chat",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node tests/injected.test.js && node --check extension/content.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

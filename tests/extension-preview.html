@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>DeepSeek Extension Preview</title></head>
+<body style="margin:0;background:#fff;font-family:system-ui">
+  <div style="height:64px;border-bottom:1px solid #eee;display:flex;align-items:center;padding:0 24px;font-weight:600">DeepSeek 官网界面占位</div>
+  <main style="max-width:760px;margin:100px auto;text-align:center;color:#8a91a3"><h1 style="color:#252b3a">有什么可以帮到你？</h1><p>此页面仅用于扩展 UI 的本地视觉测试</p></main>
+  <script>
+    window.chrome = { storage: { local: {
+      get(key, callback) { callback({ [key]: {} }); },
+      set(value, callback) { callback?.(); }
+    } } };
+    history.replaceState({}, '', '/a/chat/s/c42de0aa-38a8-4d93-a218-fad2ef7f0072');
+  </script>
+  <script src="/extension/injected.js"></script>
+  <script src="/extension/content.js"></script>
+</body>
+</html>
